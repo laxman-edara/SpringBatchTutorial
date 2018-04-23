@@ -1,0 +1,19 @@
+spring:
+  resourceFile: contacts-import.csv
+  parsing:
+    delimiter : ","
+    jobName: fileReadJob
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/customers?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&verifyServerCertificate=false
+    username: root
+    password: system
+  jpa:
+    show-sql: true
+    properties: 
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        format_sql: true
+      
+server:
+   port: 8001    
